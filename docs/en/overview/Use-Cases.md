@@ -11,7 +11,7 @@ priority: 6
 Leading companies around the world run Alluxio in production to extract value
 from their data. Some of them are listed in our
 [Powered-By](https://www.alluxio.io/powered-by-alluxio) page.
-In this section, we introduce some of the most common Alluxio use cases.
+In this section, let's introduce some of the most common Alluxio use cases.
 
 ## Object Storage Data Acceleration
 
