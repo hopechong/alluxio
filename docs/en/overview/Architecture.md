@@ -67,7 +67,7 @@ provides lower latency for RPCs and data transfer.
 <img style="width: 85%; text-align:center;" src="{{ '/img/architecture-master-docs.png' | relativize_url }}" alt="Alluxio masters"/>
 </p>
 
-Alluxio contains of two separate types of master processes. One is the **Alluxio Master**.
+Alluxio contains two separate types of master processes. One is the **Alluxio Master**.
 The Alluxio Master serves all user requests and journals file system metadata changes.
 The **Alluxio Job Master** is the process which serves as a lightweight scheduler for file system
 operations which are then executed on **Alluxio Job Workers**
