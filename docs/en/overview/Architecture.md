@@ -8,10 +8,8 @@ priority: 2
 * Table of Contents
 {:toc}
 
-ghfghfghghf
+## Architecture Overview
 
-###Architecture Overview
-  
 Alluxio serves as a new data access layer in the big data and machine learning ecosystem.
 It resides between any persistent storage systems such as Amazon S3, Microsoft Azure
 Object Store, Apache HDFS, or OpenStack Swift, and computation frameworks such as
