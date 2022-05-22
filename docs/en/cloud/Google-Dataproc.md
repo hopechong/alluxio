@@ -72,7 +72,7 @@ alluxio_site_properties="alluxio.master.mount.table.root.option.alluxio.underfs.
 
 ### Customization
 
-The Alluxio deployment on Google Dataproc can customized for more complex scenarios by passing
+The Alluxio deployment on Google Dataproc can be customized for more complex scenarios by passing
 additional metadata labels to the `gcloud clusters create` command.
 {% accordion download %}
   {% collapsible Enable Active Sync on HDFS Paths %}
