@@ -23,14 +23,14 @@ Data can be actively fetched or transparently cached into Alluxio to speed up
 I/O performance especially when the Spark deployment is remote to the data.
 In addition, Alluxio can help simplify the architecture by decoupling compute
 and physical storage. When the data path in persistent under storage is hidden
-from Spark, changes to under storage can be independent from application logic;
+from Spark, changes to under storage can be independent of application logic;
 meanwhile, as a near-compute cache, Alluxio can still provide compute frameworks
 data-locality.
 
 ## Prerequisites
 
 * Java 8 Update 60 or higher (8u60+), 64-bit.
-* An Alluxio cluster is set up and is running.
+* An Alluxio cluster is set up and running.
 This guide assumes the persistent under storage is a local HDFS deployment.
 E.g., a line of `alluxio.master.mount.table.root.ufs=hdfs://localhost:9000/alluxio/`
 is included in `${ALLUXIO_HOME}/conf/alluxio-site.properties`.
@@ -47,7 +47,7 @@ by following the [instructions]({{ '/en/contributor/Building-Alluxio-From-Source
 
 ## Basic Setup
 
-The Alluxio client jar must be distributed across the all nodes where Spark drivers
+The Alluxio client jar must be distributed across all nodes where Spark drivers
 or executors are running.
 Place the client jar on the same local path (e.g. `{{site.ALLUXIO_CLIENT_JAR_PATH}}`) on each node.
 
@@ -175,7 +175,7 @@ instead of `--conf spark.driver.extraJavaOptions=-Dalluxio.user.file.writetype.d
 
 ### Access Data from Alluxio with HA
 
-If Spark configured using the instructions in [Configure Spark for Alluxio with HA](#configure-spark-for-alluxio-with-ha),
+If Spark is configured using the instructions in [Configure Spark for Alluxio with HA](#configure-spark-for-alluxio-with-ha),
 you can write URIs using the `alluxio:///` scheme without specifying cluster
 information in the authority.
 This is because in HA mode, the address of leader Alluxio master will be served
@@ -258,7 +258,7 @@ If you are using YARN then there is a separate section which explains
 
 If Spark task locality is `ANY` while it should be `NODE_LOCAL`, it is probably
 because Alluxio and Spark use different network address representations.
-One of them them may use hostname while another uses IP address.
+One of them may use hostname while another uses IP address.
 Refer to JIRA ticket [SPARK-10149](https://issues.apache.org/jira/browse/SPARK-10149)
 for more details, where you can find solutions from the Spark community.
 
@@ -313,7 +313,7 @@ However, if `--num-executors=2` and executors are started on `host1` and
 
 ### `Class alluxio.hadoop.FileSystem not found` Issues with SparkSQL and Hive Metastore
 
-To run the `spark-shell` with the Alluxio client, the Alluxio client jar will
+To run the `spark-shell` with the Alluxio client, the Alluxio client jar 
 must be added to the classpath of the Spark driver and Spark executors, as
 [described earlier](#basic-setup).
 However, sometimes SparkSQL may fail to save tables to the Hive Metastore
