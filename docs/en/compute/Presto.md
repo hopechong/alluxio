@@ -11,7 +11,7 @@ is an open source distributed SQL query engine for running interactive analytic 
 on data at a large scale.
 This guide describes how to run queries against Presto with Alluxio as a distributed caching layer,
 for any data storage systems that Alluxio supports (AWS S3, HDFS, Azure Blob Store, NFS, and more).
-Alluxio allows Presto access data regardless of the data source and transparently cache frequently
+Alluxio allows Presto to access data regardless of the data source and transparently cache frequently
 accessed data (e.g., tables commonly used) into Alluxio distributed storage.
 Co-locating Alluxio workers with Presto workers improves data locality and reduces the I/O access
 latency when other storage systems are remote or the network is slow or congested.
@@ -54,7 +54,7 @@ This guide is tested with PrestoDB 0.247.
 
 Presto gets the database and table metadata information (including file system locations) from
 the Hive Metastore, via Presto's Hive connector.
-Here is a example Presto configuration file `${PRESTO_HOME}/etc/catalog/hive.properties`,
+Here is an example Presto configuration file `${PRESTO_HOME}/etc/catalog/hive.properties`,
 for a catalog using the Hive connector, where the metastore is located on `localhost`.
 
 ```properties
@@ -228,7 +228,7 @@ Alternatively, modify `conf/hive-site.xml` to include:
 
 Presto's Hive connector uses the config `hive.max-split-size` to control the parallelism of the
 query.
-For Alluxio 1.6 or earlier, it is recommended to set this size no less than Alluxio's block
+For Alluxio 1.6 or earlier, it is recommended to set this size to no less than Alluxio's block
 size to avoid the read contention within the same block.
 For later Alluxio versions, this is no longer an issue because of Alluxio's async caching abilities.
 
