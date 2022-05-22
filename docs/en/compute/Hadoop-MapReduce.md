@@ -180,13 +180,13 @@ $ ./bin/hadoop jar libexec/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.
 ### Logging Configuration
 
 Logs with Hadoop can be modified in many different ways.
-If you wish to directly modify the `log4j.properties` file for Hadoop, then you can add or modify
+If you wish to directly modify the `log4j.properties` file for Hadoop, you can add or modify
 appenders within `${HADOOP_HOME}/conf/log4j.properties` on each of the nodes in your cluster.
 
 You may also modify the configuration values in
 [`mapred-site.xml`](https://hadoop.apache.org/docs/r2.7.2/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml)
 in your installation.
-If you simply wish to modify log levels then your can change `mapreduce.map.log.level` or
+If you simply wish to modify log levels, you can change `mapreduce.map.log.level` or
 `mapreduce.reduce.log.level`.
 
 If you are using YARN then you may also wish to modify some of the `yarn.log.*` properties which
