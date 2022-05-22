@@ -39,7 +39,7 @@ Hive Metastore, while IO access is performed through Alluxio.
 
 ## Prerequisites
 
-* Setup Java for Java 11, at least version 11.0.7, 64-bit，as required by Trino
+* Setup Java for Java 11, at least version 11.0.7, 64-bit, as required by Trino
 * Setup Python version 2.6.x, 2.7.x, or 3.x, as required by Trino
 * [Deploy Trino](https://trino.io/docs/current/installation/deployment.html).
 This guide is tested with `Trino-352`.
@@ -55,7 +55,7 @@ This guide is tested with `Trino-352`.
 
 Trino gets the database and table metadata information (including file system locations) from
 the Hive Metastore, via Trino's Hive connector.
-Here is a example Trino configuration file `${Trino_HOME}/etc/catalog/hive.properties`,
+Here is an example Trino configuration file `${Trino_HOME}/etc/catalog/hive.properties`,
 for a catalog using the Hive connector, where the metastore is located on `localhost`.
 
 ```properties
@@ -218,7 +218,7 @@ Alternatively, modify `conf/hive-site.xml` to include:
 
 Trino's Hive connector uses the config `hive.max-split-size` to control the parallelism of the
 query.
-For Alluxio 1.6 or earlier, it is recommended to set this size no less than Alluxio's block
+For Alluxio 1.6 or earlier, it is recommended to set this size to no less than Alluxio's block
 size to avoid the read contention within the same block.
 For later Alluxio versions, this is no longer an issue because of Alluxio's async caching abilities.
 
