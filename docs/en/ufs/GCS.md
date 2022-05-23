@@ -29,7 +29,7 @@ For more information on GCS, please read its
 ## Setup 
 
 Alluxio provides two ways to access GCS. GCS version 1 is implemented based on 
-[jets3t](http://www.jets3t.org/) library which is design for AWS S3. 
+[jets3t](http://www.jets3t.org/) library which is designed for AWS S3. 
 Thus, it only accepts Google cloud storage interoperability access/secret keypair 
 which allows full access to all Google cloud storages inside a Google cloud project.
 No permission or access control can be placed on the interoperability keys.
@@ -103,7 +103,7 @@ you can [Run Alluxio Locally with GCS](#running-alluxio-locally-with-gcs).
 
 ### Nested Mount Point
 
-An GCS location can be mounted at a nested directory in the Alluxio namespace to have unified access
+A GCS location can be mounted at a nested directory in the Alluxio namespace to have unified access
 to multiple under storage systems. Alluxio's [Command Line Interface]({{ '/en/operation/User-CLI.html' | relativize_url }}) can be used for this purpose.
 
 First, within `conf/alluxio-site.properties`, specify the master host:
@@ -178,12 +178,12 @@ storage.
 The GCS credentials specified in Alluxio config represents a GCS user. GCS service backend checks
 the user permission to the bucket and the object for access control. If the given GCS user does not
 have the right access permission to the specified bucket, a permission denied error will be thrown.
-When Alluxio security is enabled, Alluxio loads the bucket ACL to Alluxio permission on the first
+When Alluxio security is enabled, Alluxio loads the bucket ACL to Alluxio permission the first
 time when the metadata is loaded to Alluxio namespace.
 
 ### Mapping from GCS ACL to Alluxio permission
 
-Alluxio checks the GCS bucket READ/WRITE ACL to determine the owner's permission mode to a Alluxio
+Alluxio checks the GCS bucket READ/WRITE ACL to determine the owner's permission mode to an Alluxio
 file. For example, if the GCS user has read-only access to the underlying bucket, the mounted
 directory and files would have `0500` mode. If the GCS user has full access to the underlying bucket,
 the mounted directory and files would have `0700` mode.
