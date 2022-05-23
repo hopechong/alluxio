@@ -16,7 +16,7 @@ Service (Kodo) is a massive, secure and highly reliable cloud storage service.
 ## Initial Setup
 
 To run an Alluxio cluster on a set of machines, you must deploy Alluxio binaries to each of these
-machines.You can
+machines. You can
 [compile the binaries from Alluxio source code]({{ '/en/contributor/Building-Alluxio-From-Source.html' | relativize_url }}),
 or [download the precompiled binaries directly]({{ '/en/deploy/Running-Alluxio-Locally.html' | relativize_url }}).
 
@@ -101,6 +101,6 @@ $ ./bin/alluxio-stop.sh local
 
 Qiniu KODO UFS integration is contributed and maintained by the Alluxio community.
 The source code is located [here](https://github.com/Alluxio/alluxio/tree/master/underfs/kodo).
-Feel free submit pull requests to improve the integration and update 
+Feel free to submit pull requests to improve the integration and update 
 the documentation [here](https://github.com/Alluxio/alluxio/edit/master/docs/en/ufs/Qiniu-KODO.md) 
 if any information is missing or out of date.
