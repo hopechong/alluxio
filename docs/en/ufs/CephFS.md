@@ -21,7 +21,7 @@ The Alluxio binaries must be on your machine. You can either
 [compile Alluxio]({{ '/en/contributor/Building-Alluxio-From-Source.html' | relativize_url }}), or
 [download the binaries locally]({{ '/en/deploy/Running-Alluxio-Locally.html' | relativize_url }}).
 
-### Install Dependences
+### Install Dependencies
 According to [ceph packages install](https://docs.ceph.com/en/latest/install/get-packages/) to install below packages:
 
 ```
@@ -176,7 +176,7 @@ In Alluxio, you can visit the nested directory in the Alluxio. Alluxio's [Comman
 {% endnavtab %}
 {% navtab cephfs-hadoop %}
 
-An CephFS location can be mounted at a nested directory in the Alluxio namespace to have unified access
+A CephFS location can be mounted at a nested directory in the Alluxio namespace to have unified access
 to multiple under storage systems. Alluxio's [Command Line Interface]({{ '/en/operation/User-CLI.html' | relativize_url }}) can be used for this purpose.
 
 Issue the following command to use the ufs cephfs:
