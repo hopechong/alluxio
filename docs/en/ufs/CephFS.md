@@ -143,7 +143,7 @@ This should start an Alluxio master and Alluxio worker. You can see the master U
 {% navtabs Test %}
 {% navtab cephfs %}
 
-An CephFS location can be mounted at a nested directory in the Alluxio namespace to have unified access
+A CephFS location can be mounted at a nested directory in the Alluxio namespace to have unified access
 to multiple under storage systems. Alluxio's [Command Line Interface]({{ '/en/operation/User-CLI.html' | relativize_url }}) can be used for this purpose.
 
 Issue the following command to use the ufs cephfs:
