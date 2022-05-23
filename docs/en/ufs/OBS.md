@@ -16,8 +16,8 @@ Service (OBS) is a massive, secure and highly reliable cloud storage service pro
 
 The Alluxio binaries must be available on the machine.
 
-In preparation for using OBS with Alluxio, follow the [OBS quick start guide](https://support-intl.huaweicloud.com/usermanual-obs/en-us_topic_0069825929.html) to create a OBS bucket. In this guide, the OBS bucket is called `OBS_BUCKET`, and the directory in the bucket is called `OBS_DIRECTORY`.
-Alluxio also supports `PFS`(Parallel File System),  witch is an extended file system of OBS. Please see the next section for configuration.
+In preparation for using OBS with Alluxio, follow the [OBS quick start guide](https://support-intl.huaweicloud.com/usermanual-obs/en-us_topic_0069825929.html) to create an OBS bucket. In this guide, the OBS bucket is called `OBS_BUCKET`, and the directory in the bucket is called `OBS_DIRECTORY`.
+Alluxio also supports `PFS`(Parallel File System),  which is an extended file system of OBS. Please see the next section for configuration.
 
 ## Basic setup
 
@@ -62,7 +62,7 @@ If you want to use the `PFS` parallel file system, please add the following conf
 fs.obs.bucketType=pfs
 ```
 
-## Excample: Running Alluxio Locally with OBS
+## Example: Running Alluxio Locally with OBS
 
 Start the Alluxio servers:
 
@@ -112,6 +112,6 @@ $ ./bin/alluxio fs mount --option fs.obs.accessKey=<OBS_ACCESS_KEY> \
 
 OBS UFS integration is contributed and maintained by the Alluxio community.
 The source code is located [here](https://github.com/Alluxio/alluxio-extensions/tree/master/underfs/obs).
-Feel free submit pull requests to improve the integration and update 
+Feel free to submit pull requests to improve the integration and update 
 the documentation [here](https://github.com/Alluxio/alluxio/edit/master/docs/en/ufs/OBS.md) 
 if any information is missing or out of date.
